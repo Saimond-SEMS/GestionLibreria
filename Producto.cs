@@ -14,12 +14,6 @@ namespace Libreria
         public int stockMinimo = 0;
         public Categoria categoria;
 
-        public static List<Producto> productos = new List<Producto>();
-
-        public static void RegistrarProducto( Producto producto ) {
-            Producto.productos.Add( producto );
-        }
-
         public Producto() {
             this.nombre = "";
             this.codigo = "";

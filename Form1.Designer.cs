@@ -64,7 +64,7 @@
 			label9 = new Label();
 			nmrc_stockMinimo = new NumericUpDown();
 			flowLayoutPanel19 = new FlowLayoutPanel();
-			bttn_registrar = new Button();
+			regis_btn_registrar = new Button();
 			Editar_tabPage = new TabPage();
 			flowLayoutPanel1 = new FlowLayoutPanel();
 			flowLayoutPanel2 = new FlowLayoutPanel();
@@ -76,27 +76,27 @@
 			flowLayoutPanel22 = new FlowLayoutPanel();
 			flowLayoutPanel28 = new FlowLayoutPanel();
 			label11 = new Label();
-			textBox1 = new TextBox();
+			edit_txt_nombre = new TextBox();
 			flowLayoutPanel23 = new FlowLayoutPanel();
 			flowLayoutPanel29 = new FlowLayoutPanel();
 			label12 = new Label();
-			comboBox1 = new ComboBox();
+			edit_combox_categoria = new ComboBox();
 			flowLayoutPanel25 = new FlowLayoutPanel();
 			flowLayoutPanel33 = new FlowLayoutPanel();
 			label13 = new Label();
-			numericUpDown1 = new NumericUpDown();
+			edit_nmrc_precio = new NumericUpDown();
 			flowLayoutPanel24 = new FlowLayoutPanel();
 			flowLayoutPanel30 = new FlowLayoutPanel();
 			label14 = new Label();
-			numericUpDown2 = new NumericUpDown();
+			edit_nmrc_stock = new NumericUpDown();
 			flowLayoutPanel27 = new FlowLayoutPanel();
 			flowLayoutPanel31 = new FlowLayoutPanel();
 			label15 = new Label();
-			numericUpDown3 = new NumericUpDown();
+			edit_nmrc_stockMinimo = new NumericUpDown();
 			flowLayoutPanel26 = new FlowLayoutPanel();
 			flowLayoutPanel32 = new FlowLayoutPanel();
 			label16 = new Label();
-			btn_editarProducto = new Button();
+			edit_btn_edit = new Button();
 			tabPage1 = new TabPage();
 			lb_regInfoBox = new Label();
 			toolTip1 = new ToolTip(components);
@@ -136,13 +136,13 @@
 			flowLayoutPanel29.SuspendLayout();
 			flowLayoutPanel25.SuspendLayout();
 			flowLayoutPanel33.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+			((System.ComponentModel.ISupportInitialize)edit_nmrc_precio).BeginInit();
 			flowLayoutPanel24.SuspendLayout();
 			flowLayoutPanel30.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
+			((System.ComponentModel.ISupportInitialize)edit_nmrc_stock).BeginInit();
 			flowLayoutPanel27.SuspendLayout();
 			flowLayoutPanel31.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
+			((System.ComponentModel.ISupportInitialize)edit_nmrc_stockMinimo).BeginInit();
 			flowLayoutPanel26.SuspendLayout();
 			flowLayoutPanel32.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)entradaListaProductoBindingSource).BeginInit();
@@ -160,7 +160,7 @@
 			tabControl1.SelectedIndex = 0;
 			tabControl1.Size = new Size(542, 420);
 			tabControl1.TabIndex = 0;
-			tabControl1.Click += tabControl1_Click;
+			tabControl1.Enter += tabControl1_Enter;
 			// 
 			// registrar_tabPage
 			// 
@@ -275,7 +275,7 @@
 			txt_codigo.Location = new Point(107, 3);
 			txt_codigo.Name = "txt_codigo";
 			txt_codigo.Size = new Size(287, 23);
-			txt_codigo.TabIndex = 1;
+			txt_codigo.TabIndex = 2;
 			txt_codigo.TextChanged += textBox2_TextChanged;
 			// 
 			// button1
@@ -319,7 +319,7 @@
 			combox_categoria.Location = new Point(107, 3);
 			combox_categoria.Name = "combox_categoria";
 			combox_categoria.Size = new Size(327, 23);
-			combox_categoria.TabIndex = 1;
+			combox_categoria.TabIndex = 3;
 			combox_categoria.SelectedIndexChanged += comboBox1_SelectedIndexChanged_1;
 			// 
 			// flowLayoutPanel11
@@ -354,7 +354,7 @@
 			nmrc_precio.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
 			nmrc_precio.Name = "nmrc_precio";
 			nmrc_precio.Size = new Size(327, 23);
-			nmrc_precio.TabIndex = 2;
+			nmrc_precio.TabIndex = 4;
 			nmrc_precio.ThousandsSeparator = true;
 			nmrc_precio.ValueChanged += numericUpDown1_ValueChanged;
 			// 
@@ -388,9 +388,10 @@
 			// nmrc_stock
 			// 
 			nmrc_stock.Location = new Point(107, 3);
+			nmrc_stock.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
 			nmrc_stock.Name = "nmrc_stock";
 			nmrc_stock.Size = new Size(327, 23);
-			nmrc_stock.TabIndex = 7;
+			nmrc_stock.TabIndex = 5;
 			nmrc_stock.ValueChanged += numericUpDown2_ValueChanged;
 			// 
 			// flowLayoutPanel15
@@ -447,30 +448,30 @@
 			// nmrc_stockMinimo
 			// 
 			nmrc_stockMinimo.Location = new Point(107, 3);
+			nmrc_stockMinimo.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
 			nmrc_stockMinimo.Name = "nmrc_stockMinimo";
 			nmrc_stockMinimo.Size = new Size(327, 23);
-			nmrc_stockMinimo.TabIndex = 1;
+			nmrc_stockMinimo.TabIndex = 6;
 			nmrc_stockMinimo.ValueChanged += numericUpDown3_ValueChanged;
 			// 
 			// flowLayoutPanel19
 			// 
-			flowLayoutPanel19.Controls.Add(bttn_registrar);
+			flowLayoutPanel19.Controls.Add(regis_btn_registrar);
 			flowLayoutPanel19.FlowDirection = FlowDirection.RightToLeft;
 			flowLayoutPanel19.Location = new Point(3, 260);
 			flowLayoutPanel19.Name = "flowLayoutPanel19";
 			flowLayoutPanel19.Size = new Size(434, 27);
 			flowLayoutPanel19.TabIndex = 7;
 			// 
-			// bttn_registrar
+			// regis_btn_registrar
 			// 
-			bttn_registrar.Enabled = false;
-			bttn_registrar.Location = new Point(260, 3);
-			bttn_registrar.Name = "bttn_registrar";
-			bttn_registrar.Size = new Size(171, 23);
-			bttn_registrar.TabIndex = 0;
-			bttn_registrar.Text = "Registrar";
-			bttn_registrar.UseVisualStyleBackColor = true;
-			bttn_registrar.Click += button2_Click;
+			regis_btn_registrar.Location = new Point(356, 3);
+			regis_btn_registrar.Name = "regis_btn_registrar";
+			regis_btn_registrar.Size = new Size(75, 23);
+			regis_btn_registrar.TabIndex = 8;
+			regis_btn_registrar.Text = "Registrar";
+			regis_btn_registrar.UseVisualStyleBackColor = true;
+			regis_btn_registrar.Click += button2_Click;
 			// 
 			// Editar_tabPage
 			// 
@@ -482,6 +483,7 @@
 			Editar_tabPage.Size = new Size(534, 392);
 			Editar_tabPage.TabIndex = 1;
 			Editar_tabPage.Text = "Editar";
+			Editar_tabPage.Enter += Editar_tabPage_Enter;
 			// 
 			// flowLayoutPanel1
 			// 
@@ -496,7 +498,7 @@
 			flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
 			flowLayoutPanel1.Location = new Point(3, 0);
 			flowLayoutPanel1.Name = "flowLayoutPanel1";
-			flowLayoutPanel1.Size = new Size(525, 399);
+			flowLayoutPanel1.Size = new Size(525, 371);
 			flowLayoutPanel1.TabIndex = 0;
 			// 
 			// flowLayoutPanel2
@@ -554,11 +556,12 @@
 			combox_edit_listaProductos.Size = new Size(188, 23);
 			combox_edit_listaProductos.TabIndex = 0;
 			combox_edit_listaProductos.ValueMember = "Dispatcher";
+			combox_edit_listaProductos.SelectedIndexChanged += combox_edit_listaProductos_DisplayMemberChanged;
 			// 
 			// flowLayoutPanel22
 			// 
 			flowLayoutPanel22.Controls.Add(flowLayoutPanel28);
-			flowLayoutPanel22.Controls.Add(textBox1);
+			flowLayoutPanel22.Controls.Add(edit_txt_nombre);
 			flowLayoutPanel22.Location = new Point(3, 95);
 			flowLayoutPanel22.Name = "flowLayoutPanel22";
 			flowLayoutPanel22.Size = new Size(522, 27);
@@ -581,18 +584,19 @@
 			label11.TabIndex = 0;
 			label11.Text = "Nombre";
 			// 
-			// textBox1
+			// edit_txt_nombre
 			// 
-			textBox1.Enabled = false;
-			textBox1.Location = new Point(209, 3);
-			textBox1.Name = "textBox1";
-			textBox1.Size = new Size(297, 23);
-			textBox1.TabIndex = 1;
+			edit_txt_nombre.Enabled = false;
+			edit_txt_nombre.Location = new Point(209, 3);
+			edit_txt_nombre.Name = "edit_txt_nombre";
+			edit_txt_nombre.Size = new Size(297, 23);
+			edit_txt_nombre.TabIndex = 1;
+			edit_txt_nombre.TextChanged += edit_somethingChanged;
 			// 
 			// flowLayoutPanel23
 			// 
 			flowLayoutPanel23.Controls.Add(flowLayoutPanel29);
-			flowLayoutPanel23.Controls.Add(comboBox1);
+			flowLayoutPanel23.Controls.Add(edit_combox_categoria);
 			flowLayoutPanel23.Location = new Point(3, 128);
 			flowLayoutPanel23.Name = "flowLayoutPanel23";
 			flowLayoutPanel23.Size = new Size(522, 27);
@@ -615,19 +619,20 @@
 			label12.TabIndex = 0;
 			label12.Text = "Categoria";
 			// 
-			// comboBox1
+			// edit_combox_categoria
 			// 
-			comboBox1.Enabled = false;
-			comboBox1.FormattingEnabled = true;
-			comboBox1.Location = new Point(209, 3);
-			comboBox1.Name = "comboBox1";
-			comboBox1.Size = new Size(297, 23);
-			comboBox1.TabIndex = 2;
+			edit_combox_categoria.Enabled = false;
+			edit_combox_categoria.FormattingEnabled = true;
+			edit_combox_categoria.Location = new Point(209, 3);
+			edit_combox_categoria.Name = "edit_combox_categoria";
+			edit_combox_categoria.Size = new Size(297, 23);
+			edit_combox_categoria.TabIndex = 2;
+			edit_combox_categoria.TabIndexChanged += edit_somethingChanged;
 			// 
 			// flowLayoutPanel25
 			// 
 			flowLayoutPanel25.Controls.Add(flowLayoutPanel33);
-			flowLayoutPanel25.Controls.Add(numericUpDown1);
+			flowLayoutPanel25.Controls.Add(edit_nmrc_precio);
 			flowLayoutPanel25.Location = new Point(3, 161);
 			flowLayoutPanel25.Name = "flowLayoutPanel25";
 			flowLayoutPanel25.Size = new Size(522, 27);
@@ -650,18 +655,20 @@
 			label13.TabIndex = 0;
 			label13.Text = "Precio";
 			// 
-			// numericUpDown1
+			// edit_nmrc_precio
 			// 
-			numericUpDown1.Enabled = false;
-			numericUpDown1.Location = new Point(209, 3);
-			numericUpDown1.Name = "numericUpDown1";
-			numericUpDown1.Size = new Size(297, 23);
-			numericUpDown1.TabIndex = 1;
+			edit_nmrc_precio.Enabled = false;
+			edit_nmrc_precio.Location = new Point(209, 3);
+			edit_nmrc_precio.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
+			edit_nmrc_precio.Name = "edit_nmrc_precio";
+			edit_nmrc_precio.Size = new Size(297, 23);
+			edit_nmrc_precio.TabIndex = 3;
+			edit_nmrc_precio.ValueChanged += edit_somethingChanged;
 			// 
 			// flowLayoutPanel24
 			// 
 			flowLayoutPanel24.Controls.Add(flowLayoutPanel30);
-			flowLayoutPanel24.Controls.Add(numericUpDown2);
+			flowLayoutPanel24.Controls.Add(edit_nmrc_stock);
 			flowLayoutPanel24.Location = new Point(3, 194);
 			flowLayoutPanel24.Name = "flowLayoutPanel24";
 			flowLayoutPanel24.Size = new Size(522, 27);
@@ -684,18 +691,20 @@
 			label14.TabIndex = 0;
 			label14.Text = "Stock";
 			// 
-			// numericUpDown2
+			// edit_nmrc_stock
 			// 
-			numericUpDown2.Enabled = false;
-			numericUpDown2.Location = new Point(209, 3);
-			numericUpDown2.Name = "numericUpDown2";
-			numericUpDown2.Size = new Size(297, 23);
-			numericUpDown2.TabIndex = 1;
+			edit_nmrc_stock.Enabled = false;
+			edit_nmrc_stock.Location = new Point(209, 3);
+			edit_nmrc_stock.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
+			edit_nmrc_stock.Name = "edit_nmrc_stock";
+			edit_nmrc_stock.Size = new Size(297, 23);
+			edit_nmrc_stock.TabIndex = 4;
+			edit_nmrc_stock.ValueChanged += edit_somethingChanged;
 			// 
 			// flowLayoutPanel27
 			// 
 			flowLayoutPanel27.Controls.Add(flowLayoutPanel31);
-			flowLayoutPanel27.Controls.Add(numericUpDown3);
+			flowLayoutPanel27.Controls.Add(edit_nmrc_stockMinimo);
 			flowLayoutPanel27.Location = new Point(3, 227);
 			flowLayoutPanel27.Name = "flowLayoutPanel27";
 			flowLayoutPanel27.Size = new Size(522, 27);
@@ -718,18 +727,19 @@
 			label15.TabIndex = 0;
 			label15.Text = "Stock Mínimo";
 			// 
-			// numericUpDown3
+			// edit_nmrc_stockMinimo
 			// 
-			numericUpDown3.Enabled = false;
-			numericUpDown3.Location = new Point(209, 3);
-			numericUpDown3.Name = "numericUpDown3";
-			numericUpDown3.Size = new Size(297, 23);
-			numericUpDown3.TabIndex = 1;
+			edit_nmrc_stockMinimo.Enabled = false;
+			edit_nmrc_stockMinimo.Location = new Point(209, 3);
+			edit_nmrc_stockMinimo.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
+			edit_nmrc_stockMinimo.Name = "edit_nmrc_stockMinimo";
+			edit_nmrc_stockMinimo.Size = new Size(297, 23);
+			edit_nmrc_stockMinimo.TabIndex = 5;
+			edit_nmrc_stockMinimo.ValueChanged += edit_somethingChanged;
 			// 
 			// flowLayoutPanel26
 			// 
 			flowLayoutPanel26.Controls.Add(flowLayoutPanel32);
-			flowLayoutPanel26.Enabled = false;
 			flowLayoutPanel26.Location = new Point(3, 260);
 			flowLayoutPanel26.Name = "flowLayoutPanel26";
 			flowLayoutPanel26.Size = new Size(522, 27);
@@ -738,30 +748,30 @@
 			// flowLayoutPanel32
 			// 
 			flowLayoutPanel32.Controls.Add(label16);
-			flowLayoutPanel32.Controls.Add(btn_editarProducto);
+			flowLayoutPanel32.Controls.Add(edit_btn_edit);
 			flowLayoutPanel32.FlowDirection = FlowDirection.RightToLeft;
 			flowLayoutPanel32.Location = new Point(3, 3);
 			flowLayoutPanel32.Name = "flowLayoutPanel32";
-			flowLayoutPanel32.Size = new Size(440, 24);
+			flowLayoutPanel32.Size = new Size(411, 24);
 			flowLayoutPanel32.TabIndex = 0;
 			// 
 			// label16
 			// 
 			label16.AutoSize = true;
-			label16.Location = new Point(437, 0);
+			label16.Location = new Point(408, 0);
 			label16.Name = "label16";
 			label16.Size = new Size(0, 15);
 			label16.TabIndex = 0;
 			// 
-			// btn_editarProducto
+			// edit_btn_edit
 			// 
-			btn_editarProducto.Enabled = false;
-			btn_editarProducto.Location = new Point(309, 3);
-			btn_editarProducto.Name = "btn_editarProducto";
-			btn_editarProducto.Size = new Size(122, 23);
-			btn_editarProducto.TabIndex = 1;
-			btn_editarProducto.Text = "Editar Producto";
-			btn_editarProducto.UseVisualStyleBackColor = true;
+			edit_btn_edit.Location = new Point(327, 3);
+			edit_btn_edit.Name = "edit_btn_edit";
+			edit_btn_edit.Size = new Size(75, 23);
+			edit_btn_edit.TabIndex = 6;
+			edit_btn_edit.Text = "Editar producto";
+			edit_btn_edit.UseVisualStyleBackColor = true;
+			edit_btn_edit.Click += edit_btn_edit_Click;
 			// 
 			// tabPage1
 			// 
@@ -853,15 +863,15 @@
 			flowLayoutPanel25.ResumeLayout(false);
 			flowLayoutPanel33.ResumeLayout(false);
 			flowLayoutPanel33.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+			((System.ComponentModel.ISupportInitialize)edit_nmrc_precio).EndInit();
 			flowLayoutPanel24.ResumeLayout(false);
 			flowLayoutPanel30.ResumeLayout(false);
 			flowLayoutPanel30.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
+			((System.ComponentModel.ISupportInitialize)edit_nmrc_stock).EndInit();
 			flowLayoutPanel27.ResumeLayout(false);
 			flowLayoutPanel31.ResumeLayout(false);
 			flowLayoutPanel31.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
+			((System.ComponentModel.ISupportInitialize)edit_nmrc_stockMinimo).EndInit();
 			flowLayoutPanel26.ResumeLayout(false);
 			flowLayoutPanel32.ResumeLayout(false);
 			flowLayoutPanel32.PerformLayout();
@@ -914,7 +924,6 @@
 		private Label label9;
 		private NumericUpDown nmrc_stockMinimo;
 		private FlowLayoutPanel flowLayoutPanel19;
-		private Button bttn_registrar;
 		private FlowLayoutPanel flowLayoutPanel20;
 		private ComboBox combox_edit_listaProductos;
 		private BindingSource entradaListaProductoBindingSource;
@@ -941,12 +950,13 @@
 		private Label label15;
 		private FlowLayoutPanel flowLayoutPanel32;
 		private Label label16;
-		private Button btn_editarProducto;
-		private TextBox textBox1;
-		private ComboBox comboBox1;
+		private TextBox edit_txt_nombre;
+		private ComboBox edit_combox_categoria;
 		private TabPage tabPage1;
-		private NumericUpDown numericUpDown1;
-		private NumericUpDown numericUpDown2;
-		private NumericUpDown numericUpDown3;
+		private NumericUpDown edit_nmrc_precio;
+		private NumericUpDown edit_nmrc_stock;
+		private NumericUpDown edit_nmrc_stockMinimo;
+		private Button regis_btn_registrar;
+		private Button edit_btn_edit;
 	}
 }
