@@ -1,0 +1,63 @@
+{
+  "$type": "Libreria.Productos.Inventario, Libreria",
+  "articulos": {
+    "$type": "System.Collections.Generic.Dictionary`2[[Libreria.Productos.CategoriaArticulo, Libreria],[System.Collections.Generic.List`1[[Libreria.Productos.Articulo, Libreria]], System.Private.CoreLib]], System.Private.CoreLib",
+    "Libro": {
+      "$type": "System.Collections.Generic.List`1[[Libreria.Productos.Articulo, Libreria]], System.Private.CoreLib",
+      "$values": [
+        {
+          "$type": "Libreria.Productos.Libro, Libreria",
+          "nombreAutor": "Bertrand Russellio",
+          "tapaDura": true,
+          "codigoArticulo": "L234123",
+          "nombre": "Pure Math",
+          "precio": 1000.0,
+          "categoria": 1
+        },
+        {
+          "$type": "Libreria.Productos.Libro, Libreria",
+          "nombreAutor": "Isaac Newton",
+          "tapaDura": false,
+          "codigoArticulo": "L444-9090",
+          "nombre": "Principia Matemática",
+          "precio": 800.0,
+          "categoria": 1
+        },
+        {
+          "$type": "Libreria.Productos.Libro, Libreria",
+          "nombreAutor": "Isaac Newton",
+          "tapaDura": false,
+          "codigoArticulo": "L444-9090",
+          "nombre": "Principia Matemática",
+          "precio": 800.0,
+          "categoria": 1
+        }
+      ]
+    },
+    "Cuaderno": {
+      "$type": "System.Collections.Generic.List`1[[Libreria.Productos.Articulo, Libreria]], System.Private.CoreLib",
+      "$values": [
+        {
+          "$type": "Libreria.Productos.Cuaderno, Libreria",
+          "paginas": 200,
+          "cosido": true,
+          "marca": "Petete",
+          "codigoArticulo": "C23234",
+          "nombre": "Cuaderno Veraniego",
+          "precio": 100.0,
+          "categoria": 2
+        },
+        {
+          "$type": "Libreria.Productos.Cuaderno, Libreria",
+          "paginas": 200,
+          "cosido": true,
+          "marca": "Petete",
+          "codigoArticulo": "C23234",
+          "nombre": "Cuaderno Veraniego",
+          "precio": 100.0,
+          "categoria": 2
+        }
+      ]
+    }
+  }
+}
