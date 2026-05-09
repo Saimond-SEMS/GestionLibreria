@@ -22,29 +22,41 @@ namespace Libreria
 			string nombreUsuario = txt_nombre.Text;
 			string clave = txt_clave.Text;
 
-			if (nombreUsuario == "")
+			if (nombreUsuario == "admin" || nombreUsuario == "Admin")
 			{
-				MessageBox.Show("Nombre de usuario vacío.");
-				return;
+				Program.user = new Security.Usuario("Admin", "Admin", "admin");
 			}
-			if (clave == "")
-			{
-				MessageBox.Show("Clave de acceso vacía.");
-				return;
+			else
+			{				
+				if (nombreUsuario == "")
+				{
+					MessageBox.Show("Nombre de usuario vacío.");
+					return;
+				}
+				if (clave == "")
+				{
+					MessageBox.Show("Clave de acceso vacía.");
+					return;
+				}
+
+				string acceso = DataManager.validateCredentials(nombreUsuario, clave);
+
+				if (acceso == "0")
+				{
+					MessageBox.Show("Usuario no encontrado.");
+					return;
+				}
+				Program.user = new Security.Usuario(nombreUsuario, acceso, clave);
 			}
-
-			string acceso = DataManager.validateCredentials(nombreUsuario, clave);
-
-			if ( acceso == "0") {
-				MessageBox.Show("Usuario no encontrado.");
-				return;
-			}
-
-			Program.user = new Security.Usuario( nombreUsuario, acceso, clave);
 
 			this.Hide();
 			FormMainMenu mainMenu = new();
-			mainMenu.Show();
+			mainMenu.Show(this);
+		}
+
+		private void btn_registrar_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("Esta función está en desarrollo.\n Usa el nombre de usuario Admin.");
 		}
 	}
 }

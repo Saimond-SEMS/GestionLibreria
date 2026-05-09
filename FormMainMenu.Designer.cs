@@ -112,6 +112,7 @@
 			btn_vender.TabIndex = 2;
 			btn_vender.Text = "Hacer una venta";
 			btn_vender.UseVisualStyleBackColor = true;
+			btn_vender.Click += btn_vender_Click;
 			// 
 			// btn_nuevoProducto
 			// 

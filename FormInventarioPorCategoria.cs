@@ -52,8 +52,17 @@ namespace Libreria
 					item.SubItems.Add(inv.GetTotalItems(articulo.codigoArticulo, articulo.categoria).ToString());
 					item.Group = group;
 
-					//group.Items.Add(item);
-					lstvw_inventarioPorCat.Items.Add(item);
+					bool repetido = false;
+					foreach (ListViewItem lvi in lstvw_inventarioPorCat.Items)
+					{
+						if (item.SubItems[0].Text == lvi.SubItems[0].Text)
+						{
+							repetido = true;
+						}
+					}
+
+					if (!repetido)
+						lstvw_inventarioPorCat.Items.Add(item);
 				}
 			}
 		}

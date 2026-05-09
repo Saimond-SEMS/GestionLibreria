@@ -41,7 +41,7 @@ namespace Libreria
 		private void btn_consultarCatalogo_Click(object sender, EventArgs e)
 		{
 			FormCatalogo form = new();
-			form.Show();
+			form.Show(this);
 		}
 
 		private void btn_consultarInventario_Click(object sender, EventArgs e)
@@ -54,31 +54,37 @@ namespace Libreria
 			}
 
 			FormInventario form = new FormInventario();
-			form.Show();
+			form.Show(this);
 		}
 
 		private void btn_consultarInventarioPorCategoria_Click(object sender, EventArgs e)
 		{
 			FormInventarioPorCategoria form = new FormInventarioPorCategoria();
-			form.Show();
+			form.Show(this);
 		}
 
 		private void btn_nuevoProducto_Click(object sender, EventArgs e)
 		{
 			FormCrearArticulo form = new FormCrearArticulo();
-			form.Show();
+			form.Show(this);
 		}
 
 		private void btn_add_Click(object sender, EventArgs e)
 		{
 			FormAgregar form = new FormAgregar();
-			form.Show();
+			form.Show(this);
 		}
 
 		private void btn_consultarCatalogoPorCategoria_Click(object sender, EventArgs e)
 		{
 			FormCatalogoPorCategoria form = new FormCatalogoPorCategoria();
-			form.Show();
+			form.Show(this);
+		}
+
+		private void btn_vender_Click(object sender, EventArgs e)
+		{
+			FormVender form = new FormVender();
+			form.Show(this);
 		}
 	}
 }
