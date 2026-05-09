@@ -71,6 +71,7 @@ namespace Libreria
 			Helpers.DataManager.GuardarInventario(inventario);
 
 			nmrc_cantidad.Value = 0.0M;
+			this.Close();
 		}
 	}
 }

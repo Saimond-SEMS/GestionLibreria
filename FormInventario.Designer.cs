@@ -33,6 +33,8 @@
 			// 
 			// lstvw_inventario
 			// 
+			lstvw_inventario.FullRowSelect = true;
+			lstvw_inventario.GridLines = true;
 			lstvw_inventario.Location = new Point(12, 12);
 			lstvw_inventario.Name = "lstvw_inventario";
 			lstvw_inventario.Size = new Size(644, 248);

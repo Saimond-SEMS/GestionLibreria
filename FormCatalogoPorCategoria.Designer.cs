@@ -33,6 +33,8 @@
 			// 
 			// lstvw_catalogoPorCategoria
 			// 
+			lstvw_catalogoPorCategoria.FullRowSelect = true;
+			lstvw_catalogoPorCategoria.GridLines = true;
 			lstvw_catalogoPorCategoria.Location = new Point(12, 12);
 			lstvw_catalogoPorCategoria.Name = "lstvw_catalogoPorCategoria";
 			lstvw_catalogoPorCategoria.Size = new Size(631, 290);

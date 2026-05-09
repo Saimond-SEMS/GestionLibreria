@@ -67,12 +67,15 @@
 			// 
 			// lstvw_articulos
 			// 
+			lstvw_articulos.FullRowSelect = true;
+			lstvw_articulos.GridLines = true;
 			lstvw_articulos.Location = new Point(3, 18);
 			lstvw_articulos.MultiSelect = false;
 			lstvw_articulos.Name = "lstvw_articulos";
 			lstvw_articulos.Size = new Size(549, 175);
 			lstvw_articulos.TabIndex = 3;
 			lstvw_articulos.UseCompatibleStateImageBehavior = false;
+			lstvw_articulos.View = View.List;
 			// 
 			// flowLayoutPanel6
 			// 
@@ -104,9 +107,11 @@
 			// 
 			nmrc_cantidad.Location = new Point(147, 3);
 			nmrc_cantidad.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
+			nmrc_cantidad.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
 			nmrc_cantidad.Name = "nmrc_cantidad";
 			nmrc_cantidad.Size = new Size(252, 23);
 			nmrc_cantidad.TabIndex = 4;
+			nmrc_cantidad.Value = new decimal(new int[] { 1, 0, 0, 0 });
 			// 
 			// flowLayoutPanel8
 			// 

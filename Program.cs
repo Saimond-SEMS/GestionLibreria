@@ -28,13 +28,13 @@ namespace Libreria
 				Directory.CreateDirectory(Helpers.Rutas.carpetaDatos);
 
 			if ( !File.Exists( Helpers.Rutas.archivousuarios ) )
-				File.WriteAllText(Helpers.Rutas.archivousuarios, "{}");
+				File.WriteAllText(Helpers.Rutas.archivousuarios, "{[]}");
 			
 			if (!File.Exists( Helpers.Rutas.archivoCatalogo) )
-				File.WriteAllText(Helpers.Rutas.archivoCatalogo, "{}");
+				File.WriteAllText(Helpers.Rutas.archivoCatalogo, "{[]}");
 			
 			if (!File.Exists( Helpers.Rutas.archivoInventario))
-				File.WriteAllText(Helpers.Rutas.archivoInventario, "{}");
+				File.WriteAllText(Helpers.Rutas.archivoInventario, "{[]}");
 		}
 	}
 }

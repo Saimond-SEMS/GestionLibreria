@@ -39,7 +39,6 @@
 			txt_clave = new TextBox();
 			flowLayoutPanel6 = new FlowLayoutPanel();
 			btn_entrar = new Button();
-			btn_registrar = new Button();
 			flowLayoutPanel1.SuspendLayout();
 			flowLayoutPanel2.SuspendLayout();
 			flowLayoutPanel4.SuspendLayout();
@@ -122,12 +121,12 @@
 			// 
 			txt_clave.Location = new Point(209, 3);
 			txt_clave.Name = "txt_clave";
+			txt_clave.PasswordChar = '*';
 			txt_clave.Size = new Size(307, 23);
 			txt_clave.TabIndex = 1;
 			// 
 			// flowLayoutPanel6
 			// 
-			flowLayoutPanel6.Controls.Add(btn_registrar);
 			flowLayoutPanel6.Controls.Add(btn_entrar);
 			flowLayoutPanel6.FlowDirection = FlowDirection.RightToLeft;
 			flowLayoutPanel6.Location = new Point(3, 85);
@@ -137,23 +136,13 @@
 			// 
 			// btn_entrar
 			// 
-			btn_entrar.Location = new Point(357, 3);
+			btn_entrar.Location = new Point(438, 3);
 			btn_entrar.Name = "btn_entrar";
 			btn_entrar.Size = new Size(75, 23);
 			btn_entrar.TabIndex = 0;
 			btn_entrar.Text = "Entrar";
 			btn_entrar.UseVisualStyleBackColor = true;
 			btn_entrar.Click += btn_entrar_Click;
-			// 
-			// btn_registrar
-			// 
-			btn_registrar.Location = new Point(438, 3);
-			btn_registrar.Name = "btn_registrar";
-			btn_registrar.Size = new Size(75, 23);
-			btn_registrar.TabIndex = 3;
-			btn_registrar.Text = "Registrar";
-			btn_registrar.UseVisualStyleBackColor = true;
-			btn_registrar.Click += btn_registrar_Click;
 			// 
 			// FormSession
 			// 

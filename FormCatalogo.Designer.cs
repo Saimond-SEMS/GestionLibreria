@@ -33,6 +33,8 @@
 			// 
 			// lstvw_catalogo
 			// 
+			lstvw_catalogo.FullRowSelect = true;
+			lstvw_catalogo.GridLines = true;
 			lstvw_catalogo.Location = new Point(12, 12);
 			lstvw_catalogo.MultiSelect = false;
 			lstvw_catalogo.Name = "lstvw_catalogo";

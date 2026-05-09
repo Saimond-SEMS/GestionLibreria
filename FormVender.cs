@@ -95,6 +95,7 @@ namespace Libreria
 			inventario.removerArticulo(articuloElegido.categoria, articuloElegido.codigoArticulo);
 			Helpers.DataManager.GuardarInventario(inventario);
 			ReLlenarLista();
+			this.Close();
 		}
 	}
 }

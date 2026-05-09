@@ -39,6 +39,7 @@
 			btn_consultarInventarioPorCategoria = new Button();
 			btn_add = new Button();
 			btn_consultarCatalogoPorCategoria = new Button();
+			btn_salir = new Button();
 			flowLayoutPanel1.SuspendLayout();
 			flowLayoutPanel3.SuspendLayout();
 			SuspendLayout();
@@ -154,11 +155,23 @@
 			btn_consultarCatalogoPorCategoria.UseVisualStyleBackColor = true;
 			btn_consultarCatalogoPorCategoria.Click += btn_consultarCatalogoPorCategoria_Click;
 			// 
+			// btn_salir
+			// 
+			btn_salir.Location = new Point(632, 398);
+			btn_salir.Name = "btn_salir";
+			btn_salir.RightToLeft = RightToLeft.Yes;
+			btn_salir.Size = new Size(156, 40);
+			btn_salir.TabIndex = 2;
+			btn_salir.Text = "Salir de la aplicación";
+			btn_salir.UseVisualStyleBackColor = true;
+			btn_salir.Click += btn_salir_Click;
+			// 
 			// FormMainMenu
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(800, 450);
+			Controls.Add(btn_salir);
 			Controls.Add(flowLayoutPanel3);
 			Controls.Add(flowLayoutPanel1);
 			Name = "FormMainMenu";
@@ -184,5 +197,6 @@
 		private Button btn_consultarInventarioPorCategoria;
 		private Button btn_add;
 		private Button btn_consultarCatalogoPorCategoria;
+		private Button btn_salir;
 	}
 }

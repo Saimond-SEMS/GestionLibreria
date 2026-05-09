@@ -88,7 +88,6 @@
 			// label1
 			// 
 			label1.AutoSize = true;
-			label1.BackColor = SystemColors.Info;
 			label1.Font = new Font("Segoe UI", 20F);
 			label1.Location = new Point(3, 0);
 			label1.Name = "label1";
