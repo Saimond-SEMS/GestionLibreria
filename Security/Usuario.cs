@@ -16,5 +16,11 @@ namespace Libreria.Security
 
 		}
 
+		public Usuario() {
+			this.nombre = "";
+			this.clave = "";
+			this.username = "";
+		}
+
 	}
 }

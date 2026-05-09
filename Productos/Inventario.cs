@@ -7,10 +7,7 @@ namespace Libreria.Productos
 	public class Inventario
 	{
 
-		public Dictionary<CategoriaArticulo, List<Articulo>> articulos
-			= new Dictionary<CategoriaArticulo, List<Articulo>>();
-
-
+		public Dictionary<CategoriaArticulo, List<Articulo>> articulos = new Dictionary<CategoriaArticulo, List<Articulo>>();
 
 		public int getTotaItems(CategoriaArticulo _categoria)
 		{
@@ -36,7 +33,6 @@ namespace Libreria.Productos
 			}
 			else
 			{
-
 				foreach (CategoriaArticulo lacategoria in Enum.GetValues(typeof(CategoriaArticulo)))
 					count += this.articulos[lacategoria].Count();
 
@@ -45,11 +41,19 @@ namespace Libreria.Productos
 			}
 		}
 
+		public int GetTotalItems( string _codigo, CategoriaArticulo _categoria )
+		{
+			int count = 0;
+			foreach (Articulo art in this.articulos[_categoria])
+			{
+				if( art.codigoArticulo == _codigo )
+					count++;
+			}
+			return count;
+		}
 
 		public void addArticulo(Articulo _articulo, int cantidad)
 		{
-
-
 			if (cantidad >= 1)
 			{
 				CategoriaArticulo cat = _articulo.categoria;
@@ -61,7 +65,6 @@ namespace Libreria.Productos
 
 				for (int i = 1; i <= cantidad; i++)
 					this.articulos[cat].Add(_articulo);
-
 			}
 			else
 			{

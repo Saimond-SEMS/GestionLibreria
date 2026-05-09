@@ -8,6 +8,7 @@ namespace Libreria.Productos
 		public string codigoArticulo { get; set; }
 		public string nombre { get; set; }
 		public float precio { get; set; }
+
 		public CategoriaArticulo categoria { get; set; }
 
 		public Articulo(string _nombre, float _precio, CategoriaArticulo _categoria, string _codigo)
@@ -16,7 +17,6 @@ namespace Libreria.Productos
 			this.precio = _precio;
 			this.categoria = _categoria;
 			this.codigoArticulo = _codigo;
-
 		}
 
 		public virtual string getArticleInfo() { return String.Empty; }
