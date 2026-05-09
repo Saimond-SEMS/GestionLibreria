@@ -143,6 +143,21 @@ namespace Libreria.Productos
 
 		}
 
+		public Articulo? GetArticulo( string id)
+		{
+			foreach (var cata in this.articulos)
+			{
+				foreach (Articulo articulo in cata.Value)
+				{
+					if ( articulo.codigoArticulo == id)
+					{
+						return articulo;
+					}
+				}
+			}
+			return null;
+		}
+
 		public Inventario()
 		{
 			foreach (CategoriaArticulo lacategoria in Enum.GetValues(typeof(CategoriaArticulo)))

@@ -49,6 +49,15 @@
 			nmrc_precio = new NumericUpDown();
 			flowLayoutPanel11 = new FlowLayoutPanel();
 			btn_registrar = new Button();
+			flowLayoutPanel12 = new FlowLayoutPanel();
+			textBox1 = new TextBox();
+			textBox2 = new TextBox();
+			button1 = new Button();
+			flowLayoutPanel13 = new FlowLayoutPanel();
+			flowLayoutPanel14 = new FlowLayoutPanel();
+			flowLayoutPanel15 = new FlowLayoutPanel();
+			label2 = new Label();
+			label3 = new Label();
 			flowLayoutPanel1.SuspendLayout();
 			flowLayoutPanel2.SuspendLayout();
 			flowLayoutPanel3.SuspendLayout();
@@ -61,6 +70,10 @@
 			flowLayoutPanel10.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)nmrc_precio).BeginInit();
 			flowLayoutPanel11.SuspendLayout();
+			flowLayoutPanel12.SuspendLayout();
+			flowLayoutPanel13.SuspendLayout();
+			flowLayoutPanel14.SuspendLayout();
+			flowLayoutPanel15.SuspendLayout();
 			SuspendLayout();
 			// 
 			// flowLayoutPanel1
@@ -71,10 +84,11 @@
 			flowLayoutPanel1.Controls.Add(flowLayoutPanel5);
 			flowLayoutPanel1.Controls.Add(flowLayoutPanel6);
 			flowLayoutPanel1.Controls.Add(flowLayoutPanel11);
+			flowLayoutPanel1.Controls.Add(flowLayoutPanel12);
 			flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
 			flowLayoutPanel1.Location = new Point(12, 12);
 			flowLayoutPanel1.Name = "flowLayoutPanel1";
-			flowLayoutPanel1.Size = new Size(391, 296);
+			flowLayoutPanel1.Size = new Size(391, 345);
 			flowLayoutPanel1.TabIndex = 0;
 			// 
 			// flowLayoutPanel2
@@ -248,11 +262,89 @@
 			btn_registrar.UseVisualStyleBackColor = true;
 			btn_registrar.Click += btn_registrar_Click;
 			// 
+			// flowLayoutPanel12
+			// 
+			flowLayoutPanel12.Controls.Add(flowLayoutPanel14);
+			flowLayoutPanel12.Controls.Add(flowLayoutPanel13);
+			flowLayoutPanel12.Controls.Add(flowLayoutPanel15);
+			flowLayoutPanel12.Location = new Point(3, 256);
+			flowLayoutPanel12.Name = "flowLayoutPanel12";
+			flowLayoutPanel12.Size = new Size(388, 67);
+			flowLayoutPanel12.TabIndex = 8;
+			// 
+			// textBox1
+			// 
+			textBox1.Location = new Point(3, 18);
+			textBox1.Name = "textBox1";
+			textBox1.Size = new Size(97, 23);
+			textBox1.TabIndex = 6;
+			// 
+			// textBox2
+			// 
+			textBox2.Location = new Point(3, 18);
+			textBox2.Name = "textBox2";
+			textBox2.Size = new Size(100, 23);
+			textBox2.TabIndex = 7;
+			// 
+			// button1
+			// 
+			button1.Location = new Point(3, 15);
+			button1.Name = "button1";
+			button1.Size = new Size(119, 23);
+			button1.TabIndex = 8;
+			button1.Text = "AgregarAtributo";
+			button1.UseVisualStyleBackColor = true;
+			// 
+			// flowLayoutPanel13
+			// 
+			flowLayoutPanel13.Controls.Add(label3);
+			flowLayoutPanel13.Controls.Add(textBox1);
+			flowLayoutPanel13.Location = new Point(112, 3);
+			flowLayoutPanel13.Name = "flowLayoutPanel13";
+			flowLayoutPanel13.Size = new Size(100, 41);
+			flowLayoutPanel13.TabIndex = 9;
+			// 
+			// flowLayoutPanel14
+			// 
+			flowLayoutPanel14.Controls.Add(label2);
+			flowLayoutPanel14.Controls.Add(textBox2);
+			flowLayoutPanel14.Location = new Point(3, 3);
+			flowLayoutPanel14.Name = "flowLayoutPanel14";
+			flowLayoutPanel14.Size = new Size(103, 41);
+			flowLayoutPanel14.TabIndex = 10;
+			// 
+			// flowLayoutPanel15
+			// 
+			flowLayoutPanel15.Controls.Add(button1);
+			flowLayoutPanel15.FlowDirection = FlowDirection.BottomUp;
+			flowLayoutPanel15.Location = new Point(218, 3);
+			flowLayoutPanel15.Name = "flowLayoutPanel15";
+			flowLayoutPanel15.Size = new Size(158, 41);
+			flowLayoutPanel15.TabIndex = 11;
+			// 
+			// label2
+			// 
+			label2.AutoSize = true;
+			label2.Location = new Point(3, 0);
+			label2.Name = "label2";
+			label2.Size = new Size(51, 15);
+			label2.TabIndex = 8;
+			label2.Text = "Atributo";
+			// 
+			// label3
+			// 
+			label3.AutoSize = true;
+			label3.Location = new Point(3, 0);
+			label3.Name = "label3";
+			label3.Size = new Size(33, 15);
+			label3.TabIndex = 7;
+			label3.Text = "Valor";
+			// 
 			// FormCrearArticulo
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(415, 320);
+			ClientSize = new Size(521, 369);
 			Controls.Add(flowLayoutPanel1);
 			Name = "FormCrearArticulo";
 			Text = "FormCrearArticulo";
@@ -276,6 +368,12 @@
 			flowLayoutPanel10.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)nmrc_precio).EndInit();
 			flowLayoutPanel11.ResumeLayout(false);
+			flowLayoutPanel12.ResumeLayout(false);
+			flowLayoutPanel13.ResumeLayout(false);
+			flowLayoutPanel13.PerformLayout();
+			flowLayoutPanel14.ResumeLayout(false);
+			flowLayoutPanel14.PerformLayout();
+			flowLayoutPanel15.ResumeLayout(false);
 			ResumeLayout(false);
 		}
 
@@ -302,5 +400,14 @@
 		private NumericUpDown nmrc_precio;
 		private FlowLayoutPanel flowLayoutPanel11;
 		private Button btn_registrar;
+		private FlowLayoutPanel flowLayoutPanel12;
+		private TextBox textBox1;
+		private TextBox textBox2;
+		private Button button1;
+		private FlowLayoutPanel flowLayoutPanel14;
+		private Label label2;
+		private FlowLayoutPanel flowLayoutPanel13;
+		private Label label3;
+		private FlowLayoutPanel flowLayoutPanel15;
 	}
 }
