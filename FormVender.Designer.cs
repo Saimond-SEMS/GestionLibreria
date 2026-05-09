@@ -77,6 +77,7 @@
 			lstvw_inventario.Size = new Size(730, 139);
 			lstvw_inventario.TabIndex = 0;
 			lstvw_inventario.UseCompatibleStateImageBehavior = false;
+			lstvw_inventario.ItemSelectionChanged += lstvw_inventario_ItemSelectionChanged;
 			// 
 			// flowLayoutPanel4
 			// 
@@ -141,9 +142,10 @@
 			// 
 			lstvw_carrito.Location = new Point(3, 18);
 			lstvw_carrito.Name = "lstvw_carrito";
-			lstvw_carrito.Size = new Size(384, 100);
+			lstvw_carrito.Size = new Size(486, 100);
 			lstvw_carrito.TabIndex = 4;
 			lstvw_carrito.UseCompatibleStateImageBehavior = false;
+			lstvw_carrito.SelectedIndexChanged += lstvw_carrito_TabIndexChanged;
 			// 
 			// lb_precioTotal
 			// 

@@ -100,6 +100,14 @@ namespace Libreria
 			form.FormClosed += reactivarElMenu;
 			this.Enabled = false;
 		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			Form1 form = new Form1();
+			form.Show(this);
+			form.FormClosed += reactivarElMenu;
+			this.Enabled = false;
+		}
 		private void reactivarElMenu(object sender, EventArgs e)
 		{
 			this.Enabled = true;
@@ -108,6 +116,20 @@ namespace Libreria
 		private void btn_salir_Click(object sender, EventArgs e)
 		{
 			Application.Exit();
+		}
+
+		private void btn_reporteVentas_Click(object sender, EventArgs e)
+		{
+			string mensaje = "Hoy se han vendido: \n";
+			float valorFinal = 0;
+
+			foreach (Articulo art in Program.ventas)
+			{
+				mensaje += $"{art.nombre} {art.precio}\n";
+				valorFinal += art.precio;
+			}
+			mensaje += $"\nPor un valor total de {valorFinal}$";
+			MessageBox.Show(mensaje);
 		}
 	}
 }

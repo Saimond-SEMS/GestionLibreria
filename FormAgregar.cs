@@ -70,7 +70,7 @@ namespace Libreria
 			inventario.addArticulo(articulo, (int)fCantidad);
 			Helpers.DataManager.GuardarInventario(inventario);
 
-			nmrc_cantidad.Value = 0.0M;
+			nmrc_cantidad.Value = 1.0M;
 			this.Close();
 		}
 	}

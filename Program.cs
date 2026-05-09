@@ -7,7 +7,7 @@ namespace Libreria
 {
 	internal static class Program
 	{
-		public static Dictionary<string, Articulo> ventas = new();
+		public static List<Articulo> ventas = new();
 		public static Usuario? user = null;
 
 		/// <summary>

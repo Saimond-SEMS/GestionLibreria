@@ -90,12 +90,13 @@ namespace Libreria.Productos
 
 					var itemToRemove = this.articulos[cat].FirstOrDefault(x => x.codigoArticulo.Trim() == id.Trim());
 
-					if (itemToRemove != null)
+					if (itemToRemove == null)
 					{
-						this.articulos[cat].Remove(itemToRemove);
-						removido = true;
+						return false;
 					}
 
+					this.articulos[cat].Remove(itemToRemove);
+					removido = true;
 
 				}
 

@@ -28,12 +28,45 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Text = "Form1";
+			lstvw = new ListView();
+			label1 = new Label();
+			SuspendLayout();
+			// 
+			// lstvw
+			// 
+			lstvw.Location = new Point(12, 27);
+			lstvw.Name = "lstvw";
+			lstvw.Size = new Size(544, 250);
+			lstvw.TabIndex = 0;
+			lstvw.UseCompatibleStateImageBehavior = false;
+			lstvw.SelectedIndexChanged += listView1_SelectedIndexChanged;
+			// 
+			// label1
+			// 
+			label1.AutoSize = true;
+			label1.Location = new Point(12, 9);
+			label1.Name = "label1";
+			label1.Size = new Size(107, 15);
+			label1.TabIndex = 1;
+			label1.Text = "Articulos a reponer";
+			// 
+			// Form1
+			// 
+			AutoScaleDimensions = new SizeF(7F, 15F);
+			AutoScaleMode = AutoScaleMode.Font;
+			ClientSize = new Size(568, 289);
+			Controls.Add(label1);
+			Controls.Add(lstvw);
+			Name = "Form1";
+			Text = "Form1";
+			Load += Form1_Load;
+			ResumeLayout(false);
+			PerformLayout();
 		}
 
 		#endregion
+
+		private ListView lstvw;
+		private Label label1;
 	}
 }

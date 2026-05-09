@@ -39,6 +39,7 @@
 			txt_clave = new TextBox();
 			flowLayoutPanel6 = new FlowLayoutPanel();
 			btn_entrar = new Button();
+			label3 = new Label();
 			flowLayoutPanel1.SuspendLayout();
 			flowLayoutPanel2.SuspendLayout();
 			flowLayoutPanel4.SuspendLayout();
@@ -49,6 +50,7 @@
 			// 
 			// flowLayoutPanel1
 			// 
+			flowLayoutPanel1.Controls.Add(label3);
 			flowLayoutPanel1.Controls.Add(flowLayoutPanel2);
 			flowLayoutPanel1.Controls.Add(flowLayoutPanel3);
 			flowLayoutPanel1.Controls.Add(flowLayoutPanel6);
@@ -62,7 +64,7 @@
 			// 
 			flowLayoutPanel2.Controls.Add(flowLayoutPanel4);
 			flowLayoutPanel2.Controls.Add(txt_nombre);
-			flowLayoutPanel2.Location = new Point(3, 3);
+			flowLayoutPanel2.Location = new Point(3, 44);
 			flowLayoutPanel2.Name = "flowLayoutPanel2";
 			flowLayoutPanel2.Size = new Size(529, 35);
 			flowLayoutPanel2.TabIndex = 0;
@@ -95,7 +97,7 @@
 			// 
 			flowLayoutPanel3.Controls.Add(flowLayoutPanel5);
 			flowLayoutPanel3.Controls.Add(txt_clave);
-			flowLayoutPanel3.Location = new Point(3, 44);
+			flowLayoutPanel3.Location = new Point(3, 85);
 			flowLayoutPanel3.Name = "flowLayoutPanel3";
 			flowLayoutPanel3.Size = new Size(529, 35);
 			flowLayoutPanel3.TabIndex = 1;
@@ -129,7 +131,7 @@
 			// 
 			flowLayoutPanel6.Controls.Add(btn_entrar);
 			flowLayoutPanel6.FlowDirection = FlowDirection.RightToLeft;
-			flowLayoutPanel6.Location = new Point(3, 85);
+			flowLayoutPanel6.Location = new Point(3, 126);
 			flowLayoutPanel6.Name = "flowLayoutPanel6";
 			flowLayoutPanel6.Size = new Size(516, 35);
 			flowLayoutPanel6.TabIndex = 2;
@@ -144,6 +146,16 @@
 			btn_entrar.UseVisualStyleBackColor = true;
 			btn_entrar.Click += btn_entrar_Click;
 			// 
+			// label3
+			// 
+			label3.AutoSize = true;
+			label3.Font = new Font("Segoe UI", 22F);
+			label3.Location = new Point(3, 0);
+			label3.Name = "label3";
+			label3.Size = new Size(485, 41);
+			label3.TabIndex = 1;
+			label3.Text = "Sistema ventas e inventario (DOCA)";
+			// 
 			// FormSession
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
@@ -153,6 +165,7 @@
 			Name = "FormSession";
 			Text = "FormSession";
 			flowLayoutPanel1.ResumeLayout(false);
+			flowLayoutPanel1.PerformLayout();
 			flowLayoutPanel2.ResumeLayout(false);
 			flowLayoutPanel2.PerformLayout();
 			flowLayoutPanel4.ResumeLayout(false);
@@ -179,5 +192,6 @@
 		private FlowLayoutPanel flowLayoutPanel6;
 		private Button btn_entrar;
 		private Button btn_registrar;
+		private Label label3;
 	}
 }

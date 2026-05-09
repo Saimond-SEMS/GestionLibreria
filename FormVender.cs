@@ -81,10 +81,13 @@ namespace Libreria
 				Articulo? art = inventario.GetArticulo(item.SubItems[0].Text);
 				if (art != null)
 				{
-					lista.Add(art);
+					for (int i = 0; i < int.Parse(item.SubItems[4].Text); i++)
+					{
+						lista.Add(art);
+					}
 				}
 			}
-			
+
 			return lista;
 		}
 
@@ -100,27 +103,19 @@ namespace Libreria
 				return;
 			}
 
-			//string codigoElegido = elegidos[0].SubItems[0].Text;
-			//int fCantidad = (int)nmrc_cantidad.Value;
+			foreach (Articulo art in enCarrito)
+			{
+				Articulo articulo = inventario.GetArticulo(art.codigoArticulo);
+				if (articulo == null)
+				{
+					continue;
+				}
+				Program.ventas.Add(articulo);
+				inventario.removerArticulo(articulo.categoria, articulo.codigoArticulo);
+			}
 
-			//Articulo? articuloElegido = null;
-			//foreach (var cat_art in inventario.articulos)
-			//{
-			//	foreach (Articulo art in cat_art.Value)
-			//	{
-			//		if (art.codigoArticulo == codigoElegido)
-			//		{
-			//			articuloElegido = art;
-			//			break;
-			//		}
-			//	}
-			//}
 
-			//if (articuloElegido == null)
-			//	return;
-
-			//inventario.removerArticulo(articuloElegido.categoria, articuloElegido.codigoArticulo);
-			//Helpers.DataManager.GuardarInventario(inventario);
+			Helpers.DataManager.GuardarInventario(inventario);
 			ReLlenarLista();
 			this.Close();
 		}
@@ -134,6 +129,9 @@ namespace Libreria
 				if (seleccionado.SubItems[0].Text == lvi.SubItems[0].Text)
 					repetido = true;
 			}
+
+			int cantidadEnInventario = int.Parse(seleccionado.SubItems[4].Text);
+
 			if (!repetido)
 			{
 				// copiar el elemento.
@@ -147,9 +145,9 @@ namespace Libreria
 			}
 			else
 			{
-				foreach(ListViewItem item in lstvw_carrito.Items)
+				foreach (ListViewItem item in lstvw_carrito.Items)
 				{
-					if ( item.SubItems[0].Text == seleccionado.SubItems[0].Text )
+					if (item.SubItems[0].Text == seleccionado.SubItems[0].Text)
 					{
 						item.SubItems[4].Text = (int.Parse(item.SubItems[4].Text) + (int)nmrc_cantidad.Value).ToString();
 					}
@@ -157,5 +155,18 @@ namespace Libreria
 			}
 		}
 
+		private void lstvw_carrito_TabIndexChanged(object sender, EventArgs e)
+		{
+		}
+
+		private void lstvw_inventario_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+		{
+			if (lstvw_inventario.SelectedItems.Count == 0)
+				return;
+
+			ListViewItem? item = lstvw_inventario.SelectedItems[0];
+
+			nmrc_cantidad.Maximum = int.Parse(item.SubItems[4].Text);
+		}
 	}
 }

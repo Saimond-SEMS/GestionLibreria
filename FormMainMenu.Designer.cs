@@ -32,17 +32,19 @@
 			flowLayoutPanel2 = new FlowLayoutPanel();
 			lb_info1 = new Label();
 			flowLayoutPanel3 = new FlowLayoutPanel();
-			btn_consultarCatalogo = new Button();
+			flowLayoutPanel4 = new FlowLayoutPanel();
 			btn_consultarInventario = new Button();
-			btn_vender = new Button();
-			btn_nuevoProducto = new Button();
 			btn_consultarInventarioPorCategoria = new Button();
 			btn_add = new Button();
-			btn_consultarCatalogoPorCategoria = new Button();
-			btn_salir = new Button();
-			flowLayoutPanel4 = new FlowLayoutPanel();
+			button1 = new Button();
 			flowLayoutPanel5 = new FlowLayoutPanel();
+			btn_nuevoProducto = new Button();
+			btn_consultarCatalogo = new Button();
+			btn_consultarCatalogoPorCategoria = new Button();
+			btn_vender = new Button();
+			btn_salir = new Button();
 			flowLayoutPanel6 = new FlowLayoutPanel();
+			btn_reporteVentas = new Button();
 			flowLayoutPanel1.SuspendLayout();
 			flowLayoutPanel3.SuspendLayout();
 			flowLayoutPanel4.SuspendLayout();
@@ -83,18 +85,20 @@
 			flowLayoutPanel3.FlowDirection = FlowDirection.TopDown;
 			flowLayoutPanel3.Location = new Point(12, 59);
 			flowLayoutPanel3.Name = "flowLayoutPanel3";
-			flowLayoutPanel3.Size = new Size(776, 152);
+			flowLayoutPanel3.Size = new Size(776, 186);
 			flowLayoutPanel3.TabIndex = 1;
 			// 
-			// btn_consultarCatalogo
+			// flowLayoutPanel4
 			// 
-			btn_consultarCatalogo.Location = new Point(3, 49);
-			btn_consultarCatalogo.Name = "btn_consultarCatalogo";
-			btn_consultarCatalogo.Size = new Size(150, 40);
-			btn_consultarCatalogo.TabIndex = 0;
-			btn_consultarCatalogo.Text = "Consultar Catalogo";
-			btn_consultarCatalogo.UseVisualStyleBackColor = true;
-			btn_consultarCatalogo.Click += btn_consultarCatalogo_Click;
+			flowLayoutPanel4.Controls.Add(btn_consultarInventario);
+			flowLayoutPanel4.Controls.Add(btn_consultarInventarioPorCategoria);
+			flowLayoutPanel4.Controls.Add(btn_add);
+			flowLayoutPanel4.Controls.Add(button1);
+			flowLayoutPanel4.FlowDirection = FlowDirection.TopDown;
+			flowLayoutPanel4.Location = new Point(3, 3);
+			flowLayoutPanel4.Name = "flowLayoutPanel4";
+			flowLayoutPanel4.Size = new Size(237, 200);
+			flowLayoutPanel4.TabIndex = 8;
 			// 
 			// btn_consultarInventario
 			// 
@@ -105,26 +109,6 @@
 			btn_consultarInventario.Text = "Consultar inventario";
 			btn_consultarInventario.UseVisualStyleBackColor = true;
 			btn_consultarInventario.Click += btn_consultarInventario_Click;
-			// 
-			// btn_vender
-			// 
-			btn_vender.Location = new Point(129, 3);
-			btn_vender.Name = "btn_vender";
-			btn_vender.Size = new Size(150, 40);
-			btn_vender.TabIndex = 2;
-			btn_vender.Text = "Hacer una venta";
-			btn_vender.UseVisualStyleBackColor = true;
-			btn_vender.Click += btn_vender_Click;
-			// 
-			// btn_nuevoProducto
-			// 
-			btn_nuevoProducto.Location = new Point(3, 3);
-			btn_nuevoProducto.Name = "btn_nuevoProducto";
-			btn_nuevoProducto.Size = new Size(150, 40);
-			btn_nuevoProducto.TabIndex = 3;
-			btn_nuevoProducto.Text = "Crear nuevo producto";
-			btn_nuevoProducto.UseVisualStyleBackColor = true;
-			btn_nuevoProducto.Click += btn_nuevoProducto_Click;
 			// 
 			// btn_consultarInventarioPorCategoria
 			// 
@@ -146,6 +130,46 @@
 			btn_add.UseVisualStyleBackColor = true;
 			btn_add.Click += btn_add_Click;
 			// 
+			// button1
+			// 
+			button1.Location = new Point(3, 141);
+			button1.Name = "button1";
+			button1.Size = new Size(150, 40);
+			button1.TabIndex = 10;
+			button1.Text = "Alertas reposicion";
+			button1.UseVisualStyleBackColor = true;
+			button1.Click += button1_Click;
+			// 
+			// flowLayoutPanel5
+			// 
+			flowLayoutPanel5.Controls.Add(btn_nuevoProducto);
+			flowLayoutPanel5.Controls.Add(btn_consultarCatalogo);
+			flowLayoutPanel5.Controls.Add(btn_consultarCatalogoPorCategoria);
+			flowLayoutPanel5.Location = new Point(246, 3);
+			flowLayoutPanel5.Name = "flowLayoutPanel5";
+			flowLayoutPanel5.Size = new Size(200, 140);
+			flowLayoutPanel5.TabIndex = 9;
+			// 
+			// btn_nuevoProducto
+			// 
+			btn_nuevoProducto.Location = new Point(3, 3);
+			btn_nuevoProducto.Name = "btn_nuevoProducto";
+			btn_nuevoProducto.Size = new Size(150, 40);
+			btn_nuevoProducto.TabIndex = 3;
+			btn_nuevoProducto.Text = "Crear nuevo producto";
+			btn_nuevoProducto.UseVisualStyleBackColor = true;
+			btn_nuevoProducto.Click += btn_nuevoProducto_Click;
+			// 
+			// btn_consultarCatalogo
+			// 
+			btn_consultarCatalogo.Location = new Point(3, 49);
+			btn_consultarCatalogo.Name = "btn_consultarCatalogo";
+			btn_consultarCatalogo.Size = new Size(150, 40);
+			btn_consultarCatalogo.TabIndex = 0;
+			btn_consultarCatalogo.Text = "Consultar Catalogo";
+			btn_consultarCatalogo.UseVisualStyleBackColor = true;
+			btn_consultarCatalogo.Click += btn_consultarCatalogo_Click;
+			// 
 			// btn_consultarCatalogoPorCategoria
 			// 
 			btn_consultarCatalogoPorCategoria.Location = new Point(3, 95);
@@ -155,6 +179,16 @@
 			btn_consultarCatalogoPorCategoria.Text = "Consular catalogo por categoria";
 			btn_consultarCatalogoPorCategoria.UseVisualStyleBackColor = true;
 			btn_consultarCatalogoPorCategoria.Click += btn_consultarCatalogoPorCategoria_Click;
+			// 
+			// btn_vender
+			// 
+			btn_vender.Location = new Point(3, 3);
+			btn_vender.Name = "btn_vender";
+			btn_vender.Size = new Size(150, 40);
+			btn_vender.TabIndex = 2;
+			btn_vender.Text = "Hacer una venta";
+			btn_vender.UseVisualStyleBackColor = true;
+			btn_vender.Click += btn_vender_Click;
 			// 
 			// btn_salir
 			// 
@@ -167,35 +201,24 @@
 			btn_salir.UseVisualStyleBackColor = true;
 			btn_salir.Click += btn_salir_Click;
 			// 
-			// flowLayoutPanel4
-			// 
-			flowLayoutPanel4.Controls.Add(btn_consultarInventario);
-			flowLayoutPanel4.Controls.Add(btn_consultarInventarioPorCategoria);
-			flowLayoutPanel4.Controls.Add(btn_add);
-			flowLayoutPanel4.FlowDirection = FlowDirection.TopDown;
-			flowLayoutPanel4.Location = new Point(3, 3);
-			flowLayoutPanel4.Name = "flowLayoutPanel4";
-			flowLayoutPanel4.Size = new Size(200, 140);
-			flowLayoutPanel4.TabIndex = 8;
-			// 
-			// flowLayoutPanel5
-			// 
-			flowLayoutPanel5.Controls.Add(btn_nuevoProducto);
-			flowLayoutPanel5.Controls.Add(btn_consultarCatalogo);
-			flowLayoutPanel5.Controls.Add(btn_consultarCatalogoPorCategoria);
-			flowLayoutPanel5.Location = new Point(209, 3);
-			flowLayoutPanel5.Name = "flowLayoutPanel5";
-			flowLayoutPanel5.Size = new Size(200, 140);
-			flowLayoutPanel5.TabIndex = 9;
-			// 
 			// flowLayoutPanel6
 			// 
 			flowLayoutPanel6.Controls.Add(btn_vender);
-			flowLayoutPanel6.FlowDirection = FlowDirection.RightToLeft;
-			flowLayoutPanel6.Location = new Point(12, 217);
+			flowLayoutPanel6.Controls.Add(btn_reporteVentas);
+			flowLayoutPanel6.Location = new Point(189, 398);
 			flowLayoutPanel6.Name = "flowLayoutPanel6";
-			flowLayoutPanel6.Size = new Size(282, 61);
+			flowLayoutPanel6.Size = new Size(414, 61);
 			flowLayoutPanel6.TabIndex = 3;
+			// 
+			// btn_reporteVentas
+			// 
+			btn_reporteVentas.Location = new Point(159, 3);
+			btn_reporteVentas.Name = "btn_reporteVentas";
+			btn_reporteVentas.Size = new Size(139, 40);
+			btn_reporteVentas.TabIndex = 3;
+			btn_reporteVentas.Text = "Reporte de ventas";
+			btn_reporteVentas.UseVisualStyleBackColor = true;
+			btn_reporteVentas.Click += btn_reporteVentas_Click;
 			// 
 			// FormMainMenu
 			// 
@@ -236,5 +259,7 @@
 		private FlowLayoutPanel flowLayoutPanel4;
 		private FlowLayoutPanel flowLayoutPanel5;
 		private FlowLayoutPanel flowLayoutPanel6;
+		private Button button1;
+		private Button btn_reporteVentas;
 	}
 }
