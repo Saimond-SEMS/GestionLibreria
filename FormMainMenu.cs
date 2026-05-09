@@ -42,6 +42,8 @@ namespace Libreria
 		{
 			FormCatalogo form = new();
 			form.Show(this);
+			form.FormClosed += reactivarElMenu;
+			this.Enabled = false;
 		}
 
 		private void btn_consultarInventario_Click(object sender, EventArgs e)
@@ -54,37 +56,53 @@ namespace Libreria
 			}
 
 			FormInventario form = new FormInventario();
+			form.FormClosed += reactivarElMenu;
 			form.Show(this);
+			this.Enabled = false;
 		}
 
 		private void btn_consultarInventarioPorCategoria_Click(object sender, EventArgs e)
 		{
 			FormInventarioPorCategoria form = new FormInventarioPorCategoria();
 			form.Show(this);
+			form.FormClosed += reactivarElMenu;
+			this.Enabled = false;
 		}
 
 		private void btn_nuevoProducto_Click(object sender, EventArgs e)
 		{
 			FormCrearArticulo form = new FormCrearArticulo();
 			form.Show(this);
+			form.FormClosed += reactivarElMenu;
+			this.Enabled = false;
 		}
 
 		private void btn_add_Click(object sender, EventArgs e)
 		{
 			FormAgregar form = new FormAgregar();
 			form.Show(this);
+			form.FormClosed += reactivarElMenu;
+			this.Enabled = false;
 		}
 
 		private void btn_consultarCatalogoPorCategoria_Click(object sender, EventArgs e)
 		{
 			FormCatalogoPorCategoria form = new FormCatalogoPorCategoria();
 			form.Show(this);
+			form.FormClosed += reactivarElMenu;
+			this.Enabled = false;
 		}
 
 		private void btn_vender_Click(object sender, EventArgs e)
 		{
 			FormVender form = new FormVender();
 			form.Show(this);
+			form.FormClosed += reactivarElMenu;
+			this.Enabled = false;
+		}
+		private void reactivarElMenu(object sender, EventArgs e)
+		{
+			this.Enabled = true;
 		}
 	}
 }
